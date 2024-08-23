@@ -23,8 +23,8 @@ func NewRepository(dbParam *sql.DB) Repository {
 }
 
 func (r *emailRepository) GetEmailTemplate(ctx *gin.Context, code string) (res EmailTemplate, err error) {
-	conn := goqu.New(constant.PostgresDialect.String(), r.db)
-	dialect := conn.From(constant.EmailTemplateTableName.String()).
+	conn := goqu.New(constant.Postgres.Dialect(), r.db)
+	dialect := conn.From(constant.EmailTemplateTableName.TableName()).
 		Select(
 			goqu.C("id"),
 			goqu.C("code"),

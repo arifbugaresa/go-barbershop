@@ -2,28 +2,28 @@ package constant
 
 type Dialect string
 
-func (d Dialect) String() string {
+func (d Dialect) Dialect() string {
 	return string(d)
 }
 
 const (
-	PostgresDialect Dialect = "postgres"
-	MysqlDialect    Dialect = "mysql"
+	Postgres Dialect = "postgres"
+	Mysql    Dialect = "mysql"
 )
 
 type TableName string
 
-func (t TableName) String() string {
+func (t TableName) TableName() string {
 	return string(t)
 }
 
 const (
-	EmployeeTableName       TableName = "employees"
-	UserTableName           TableName = "users"
-	RoleTableName           TableName = "roles"
-	PermissionTableName     TableName = "permissions"
-	RolePermissionTableName TableName = "role_permissions"
-	EmailTemplateTableName  TableName = "email_templates"
+	User                   TableName = "users"
+	Role                   TableName = "roles"
+	Permission             TableName = "permissions"
+	RolePermission         TableName = "role_permissions"
+	EmailTemplateTableName TableName = "email_templates"
+	Service                TableName = "services"
 )
 
 type DateTimeFormat string

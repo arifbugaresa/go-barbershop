@@ -27,8 +27,8 @@ func NewRepository(database *sql.DB) Repository {
 }
 
 func (r *userRepository) Login(ctx *gin.Context, user LoginRequest) (result User, err error) {
-	conn := goqu.New(constant.PostgresDialect.String(), r.db)
-	dialect := conn.From(constant.UserTableName.String()).
+	conn := goqu.New(constant.Postgres.Dialect(), r.db)
+	dialect := conn.From(constant.User.TableName()).
 		Select(
 			goqu.C("id"),
 			goqu.C("username"),
@@ -50,8 +50,8 @@ func (r *userRepository) Login(ctx *gin.Context, user LoginRequest) (result User
 }
 
 func (r *userRepository) SignUp(ctx *gin.Context, user User) (err error) {
-	conn := goqu.New(constant.PostgresDialect.String(), r.db)
-	dataset := conn.Insert(constant.UserTableName.String()).Rows(
+	conn := goqu.New(constant.Postgres.Dialect(), r.db)
+	dataset := conn.Insert(constant.User.TableName()).Rows(
 		goqu.Record{
 			"username":  user.Username,
 			"full_name": user.Username,
@@ -69,9 +69,9 @@ func (r *userRepository) SignUp(ctx *gin.Context, user User) (err error) {
 }
 
 func (r *userRepository) GetListPermissionByRoleId(ctx *gin.Context, user User) (result []permission.Permission, err error) {
-	conn := goqu.New(constant.PostgresDialect.String(), r.db)
-	dataset := conn.From(goqu.T(constant.RolePermissionTableName.String()).As("rp")).
-		Join(goqu.T(constant.PermissionTableName.String()).As("p"), goqu.On(
+	conn := goqu.New(constant.Postgres.Dialect(), r.db)
+	dataset := conn.From(goqu.T(constant.RolePermission.TableName()).As("rp")).
+		Join(goqu.T(constant.Permission.TableName()).As("p"), goqu.On(
 			goqu.I("rp.permission_id").Eq(goqu.I("p.id")),
 		)).
 		Select(

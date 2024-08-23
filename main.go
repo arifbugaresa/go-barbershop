@@ -7,6 +7,7 @@ import (
 	"go-barbershop/configs"
 	"go-barbershop/databases/connection"
 	"go-barbershop/databases/migration"
+	"go-barbershop/modules/service"
 	"go-barbershop/modules/user"
 	"go-barbershop/utils/logger"
 	"go-barbershop/utils/rabbitmq"
@@ -58,6 +59,7 @@ func InitiateRouter(dbConnection *sql.DB, rabbitMqConn *rabbitmq.RabbitMQ) {
 	swagger.Initiator(router)
 
 	user.Initiator(router, rabbitMqConn, dbConnection)
+	service.Initiator(router, dbConnection)
 
 	router.Run(viper.GetString("app.port"))
 }
