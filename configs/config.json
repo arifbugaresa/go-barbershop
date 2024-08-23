@@ -1,0 +1,54 @@
+{
+  "name": "Enterprise Project",
+  "app": {
+    "mode": "staging",
+    "base_url": "localhost",
+    "port": ":8080"
+  },
+  "migration": {
+    "db": {
+      "mysql": {
+        "db_host": "localhost",
+        "db_port": 3307,
+        "db_name": "go_enterprise",
+        "db_user": "admin",
+        "db_password": "d8K3cqVSHTPWHG",
+        "db_engine": "mysql"
+      },
+      "postgres": {
+        "db_host": "localhost",
+        "db_port": 5433,
+        "db_name": "go_learning",
+        "db_user": "root",
+        "db_password": "password",
+        "db_engine": "postgres"
+      }
+    }
+  },
+  "chat_gpt": {
+    "app_key": ""
+  },
+  "jwt_secret_key": "9wBhsNnwtq0AFs30V6B90KTDsAQ2oFW1VWcDpNVQ",
+  "storage": {
+    "log": {
+      "error": "log/error",
+      "panic": "log/panic"
+    }
+  },
+  "notification":{
+    "email": {
+      "sender":"email@gmail.com",
+      "password": "password",
+      "host": "smtp.gmail.com",
+      "address": "smtp.gmail.com:587"
+    }
+  },
+  "connection":{
+    "rabbit": {
+      "url": "amqp://admin:admin@localhost:5672",
+      "port": "",
+      "user": "admin",
+      "password": "admin"
+    }
+  }
+}
