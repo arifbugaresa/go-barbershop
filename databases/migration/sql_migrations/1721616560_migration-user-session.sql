@@ -7,6 +7,8 @@ CREATE TABLE users (
     password        VARCHAR(256) NOT NULL,
     full_name       VARCHAR(256),
     email           VARCHAR(256),
+    address         VARCHAR(256),
+    photo           VARCHAR(256),
     user_status     INTEGER,
     role_id         INTEGER,
     created_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -17,13 +19,5 @@ CREATE TABLE users (
 
 ALTER TABLE users
     ADD CONSTRAINT unique_username UNIQUE (username);
-
-CREATE TABLE session_histories (
-    user_id         INTEGER NOT NULL,
-    token           TEXT,
-    session_data    TEXT,
-    created_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    expired_at      TIMESTAMP
-);
 
 -- +migrate StatementEnd

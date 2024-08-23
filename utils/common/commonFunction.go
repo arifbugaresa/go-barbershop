@@ -2,7 +2,7 @@ package common
 
 import (
 	"errors"
-	"go-learning/utils/logger"
+	"go-barbershop/utils/logger"
 	"math/rand"
 	"reflect"
 )

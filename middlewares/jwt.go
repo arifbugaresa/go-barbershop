@@ -6,9 +6,9 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"go-learning/utils/common"
-	"go-learning/utils/logger"
-	"go-learning/utils/redis"
+	"go-barbershop/utils/common"
+	"go-barbershop/utils/logger"
+	"go-barbershop/utils/redis"
 	"strings"
 	"time"
 )

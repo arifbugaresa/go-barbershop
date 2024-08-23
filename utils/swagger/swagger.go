@@ -5,7 +5,7 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
-	_ "go-learning/docs"
+	_ "go-barbershop/docs"
 )
 
 func Initiator(router *gin.Engine) {

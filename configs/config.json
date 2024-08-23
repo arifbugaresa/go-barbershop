@@ -1,7 +1,7 @@
 {
-  "name": "Enterprise Project",
+  "name": "Barbershop",
   "app": {
-    "mode": "staging",
+    "mode": "development",
     "base_url": "localhost",
     "port": ":8080"
   },
@@ -10,7 +10,7 @@
       "mysql": {
         "db_host": "localhost",
         "db_port": 3307,
-        "db_name": "go_enterprise",
+        "db_name": "go_barbershop",
         "db_user": "admin",
         "db_password": "d8K3cqVSHTPWHG",
         "db_engine": "mysql"
@@ -18,7 +18,7 @@
       "postgres": {
         "db_host": "localhost",
         "db_port": 5433,
-        "db_name": "go_learning",
+        "db_name": "go_barbershop",
         "db_user": "root",
         "db_password": "password",
         "db_engine": "postgres"

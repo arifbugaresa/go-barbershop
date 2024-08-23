@@ -3,8 +3,8 @@ package rabbitmq
 import (
 	"github.com/spf13/viper"
 	"github.com/streadway/amqp"
-	"go-learning/utils/common"
-	"go-learning/utils/constant"
+	"go-barbershop/utils/common"
+	"go-barbershop/utils/constant"
 )
 
 func (r *RabbitMQ) Publish(rabbitConfig MqConfig) (err error) {

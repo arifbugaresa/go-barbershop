@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/spf13/viper"
 	"github.com/streadway/amqp"
-	"go-learning/utils/constant"
+	"go-barbershop/utils/constant"
 )
 
 func Initiator() *RabbitMQ {

@@ -3,7 +3,7 @@ package user
 import (
 	"errors"
 	"fmt"
-	"go-learning/utils/common"
+	"go-barbershop/utils/common"
 	"regexp"
 )
 

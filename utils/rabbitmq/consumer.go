@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"go-learning/utils/constant"
-	"go-learning/utils/email"
-	"go-learning/utils/logger"
+	"go-barbershop/utils/constant"
+	"go-barbershop/utils/email"
+	"go-barbershop/utils/logger"
 )
 
 func (r *RabbitMQ) Consume() (err error) {

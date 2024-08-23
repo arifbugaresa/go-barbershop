@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"github.com/doug-martin/goqu/v9"
 	"github.com/gin-gonic/gin"
-	"go-learning/utils/constant"
-	"go-learning/utils/logger"
+	"go-barbershop/utils/constant"
+	"go-barbershop/utils/logger"
 )
 
 type Repository interface {

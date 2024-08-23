@@ -3,10 +3,10 @@ package user
 import (
 	"database/sql"
 	"github.com/gin-gonic/gin"
-	"go-learning/middlewares"
-	"go-learning/utils/common"
-	"go-learning/utils/email"
-	"go-learning/utils/rabbitmq"
+	"go-barbershop/middlewares"
+	"go-barbershop/utils/common"
+	"go-barbershop/utils/email"
+	"go-barbershop/utils/rabbitmq"
 )
 
 func Initiator(router *gin.Engine, rabbitMqConn *rabbitmq.RabbitMQ, dbConnection *sql.DB) {

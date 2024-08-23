@@ -2,7 +2,7 @@ package middlewares
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-learning/utils/common"
+	"go-barbershop/utils/common"
 )
 
 func Logging() gin.HandlerFunc {
